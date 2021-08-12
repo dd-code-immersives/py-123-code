@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ModelForm Tutorial</title>
+</head>
+<body>
+<h2>All User Details</h2>
+<table>
+    {% for item in users %}
+    <tr>
+        <td><b>Title:</b>{{ item.title }}</td>
+        <td><b>Gender:</b> {{ item.gender|default:"NA" }}</td>
+        <td><b>Notes:</b> {{ item.notes }}</td>
+    </tr>
+    <tr>
+    <td colspan="2" class="divider"><hr/></td>
+</tr>
+    {% endfor %}
+</table>
+</body>
+</html>
